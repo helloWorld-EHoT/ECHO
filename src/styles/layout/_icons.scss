@@ -1,0 +1,14 @@
+.male-female {
+  .male, .female {
+    width: 16px;
+    height: 32px;
+    background: url("./assets/icons/male-female.svg") no-repeat;
+    background-size: 200% 100%;
+  }
+  .female {
+    background-position-x: 108%;
+  }
+  .male {
+    background-position-x: -8%;
+  }
+}

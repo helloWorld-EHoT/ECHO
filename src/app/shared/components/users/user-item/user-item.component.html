@@ -1,0 +1,113 @@
+<div class="user-item container">
+  <div class="user-item__common row" (click)="toggleCollapsed(userData)">
+    <div class="user-pic col-1" *ngIf="userData.picture.medium.length">
+      <img [src]="userData.picture.medium">
+    </div>
+    <div class="user-pic col-1" *ngIf="!userData.picture.medium.length">
+      <img [src]="'./assets/icons/user-pic-' + userData.gender + '.jpg'">
+    </div>
+    <div class="user-last-name col-2">
+      <p>{{userData.name.last | titlecase}}</p>
+    </div>
+    <div class="user-first-name col-2">
+      <p>{{userData.name.first | titlecase}}</p>
+    </div>
+    <div class="user-name col-2">
+      <p>{{userData.login.username}}</p>
+    </div>
+    <div class="user-phone col-2">
+      <p>{{userData.phone}}</p>
+    </div>
+    <div class="user-location col-2">
+      <p>{{userData.location.state | titlecase}}</p>
+    </div>
+    <div class="col-1 d-f a-i-c">
+      <div class="open-detailed" [class.collapsed]="userData.collapsed"></div>
+    </div>
+  </div>
+  <div class="user-item__detailed container" [class.collapsed]="!userData.collapsed">
+    <div class="row">
+      <div class="detailed-name col-12">
+        <h1>
+          {{userData.name.first | titlecase}}
+        </h1>
+        <div class="male-female">
+          <div [class]="userData.gender"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <ul class="detailed-col-list">
+          <li class="detailed-row">
+            <p>
+              Username: <span>{{userData.login.username}}</span>
+            </p>
+          </li>
+          <li class="detailed-row">
+            <p>
+              Registered: <span>{{userData.registered.date | date:'dd/MM/yyyy'}}</span>
+            </p>
+
+          </li>
+          <li class="detailed-row">
+            <p>
+              Email: <span>{{userData.email}}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <ul class="detailed-col-list">
+          <li class="detailed-row">
+            <p>
+              Address: <span>{{userData.location.street}}</span>
+            </p>
+          </li>
+          <li class="detailed-row">
+            <p>
+              City: <span>{{userData.location.city}}</span>
+            </p>
+          </li>
+          <li class="detailed-row">
+            <p>
+              Zip Code: <span>{{userData.location.postcode}}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <ul class="detailed-col-list">
+          <li class="detailed-row">
+            <p>
+              Birthday: <span>{{userData.dob.date | date:'dd/MM/yyyy'}}</span>
+            </p>
+          </li>
+          <li class="detailed-row">
+            <p>
+              Phone: <span>{{userData.phone}}</span>
+            </p>
+          </li>
+          <li class="detailed-row">
+            <p>
+              Cell: <span>{{userData.cell}}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <div class="detailed-row" *ngIf="userData.picture.medium.length">
+          <img [src]="userData.picture.large"
+               [alt]="([userData.name.first, userData.name.last] | altTitle) | titlecase">
+        </div>
+        <div class="detailed-row" *ngIf="!userData.picture.medium.length">
+          <img [src]="'./assets/icons/user-pic-' + userData.gender + '.jpg'"
+               [alt]="([userData.name.first, userData.name.last] | altTitle) | titlecase">
+        </div>
+      </div>
+      <div class="col-1">
+        <div class="open-detailed remove-user" (click)="remove()"></div>
+      </div>
+    </div>
+  </div>
+</div>

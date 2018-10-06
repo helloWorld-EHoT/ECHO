@@ -1,0 +1,71 @@
+.add-user-form {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  &.collapsed {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+
+  button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #AAAAAA;
+    border-radius: 3px;
+    background: rgba(69, 139, 55, 0.52);
+    cursor: pointer;
+    color: #EEEEEE;
+    &:hover {
+      background: rgba(69, 139, 55, 0.73);
+    }
+    &:disabled {
+      color: #666666;
+      cursor: default;
+      background: transparent !important;
+    }
+
+  }
+}
+
+form {
+  padding: 30px 0;
+}
+
+.form-group {
+  .form-control {
+    position: relative;
+    label {
+      cursor: pointer;
+      opacity: 0.5;
+      margin-right: 10px;
+      span {
+        color: #bb412a;
+      }
+    }
+    input {
+      width: 100%;
+      height: 32px;
+      outline: none;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #AAAAAA;
+      transition: 0.2s ease-out;
+      &:focus, &:active {
+        border-bottom-color: #458b37;
+      }
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+      }
+    }
+    #male:checked ~ label[for=male] {
+      opacity: 1;
+    }
+    #female:checked ~ label[for=female] {
+      opacity: 1;
+    }
+  }
+}
+

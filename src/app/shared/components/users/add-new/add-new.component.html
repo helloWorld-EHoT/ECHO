@@ -1,0 +1,71 @@
+<form class="form-group container" [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="form-control col-2">
+      <input type="text" id="last" [formControlName]="'last'">
+      <label for="last">Last name <span>*</span></label>
+    </div>
+    <div class="form-control col-2">
+      <input type="text" id="first" [formControlName]="'first'">
+      <label for="first">First name <span>*</span></label>
+    </div>
+    <div class="form-control col-2">
+      <input type="text" id="username" [formControlName]="'username'">
+      <label for="username">Username <span>*</span></label>
+    </div>
+    <div class="form-control col-2">
+      <input type="text" id="phone" [formControlName]="'phone'">
+      <label for="phone">Phone <span>*</span></label>
+    </div>
+    <div class="form-control col-2">
+      <input type="text" id="state" [formControlName]="'state'">
+      <label for="state">State <span>*</span></label>
+    </div>
+    <div class="form-control col-1 male-female d-f">
+      <input type="radio" formControlName="gender" class="hidden gender" id="male" name="gender" value="male">
+      <label for="male">
+        <div class="male"></div>
+      </label>
+      <input type="radio" formControlName="gender" class="hidden gender" id="female" name="gender" value="female">
+      <label for="female">
+        <div class="female"></div>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+      <div class="form-control">
+        <input type="text" id="email" [formControlName]="'email'">
+        <label for="email">Email <span>*</span></label>
+      </div>
+      <div class="form-control">
+        <input type="text" id="cell" [formControlName]="'cell'">
+        <label for="cell">Cell <span>*</span></label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-control">
+        <input type="text" id="address" [formControlName]="'address'">
+        <label for="address">Address <span>*</span></label>
+      </div>
+      <div class="form-control">
+        <input type="text" id="city" [formControlName]="'city'">
+        <label for="city">City <span>*</span></label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-control">
+        <input type="text" id="zip" [formControlName]="'zip'">
+        <label for="zip">Zip code <span>*</span></label>
+      </div>
+      <div class="form-control">
+        <input type="date" id="dob" [formControlName]="'dob'">
+        <label for="dob">Birthday <span>*</span></label>
+      </div>
+    </div>
+    <div class="col-2">
+      <button type="submit" [disabled]="form.invalid">{{'Add new user' | uppercase}}</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,163 @@
+.user-list {
+  list-style: none;
+  padding: 48px 20px;
+  margin: 0;
+  &__header {
+    font-weight: 700;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 8px;
+    background: #EEEEEE;
+    z-index: 6;
+  }
+  &__item {
+    &:nth-child(even) {
+      .user-item {
+        background: #CCCCCC;
+      }
+    }
+  }
+}
+
+.user-item {
+  &__common {
+    user-select: none;
+  }
+  &__detailed {
+    max-height: 260px;
+    height: 260px;
+    padding: 30px;
+    transition: all 0.2s ease-out;
+    &.collapsed {
+      opacity: 0;
+      max-height: 0;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .detailed {
+      &-name {
+        font-weight: 700;
+        font-size: 24px;
+        margin-right: 8px;
+        display: flex;
+      }
+    }
+
+  }
+}
+
+.user-last-name,
+.user-first-name,
+.user-name,
+.user-phone,
+.user-location,
+.open-detailed {
+  p {
+    margin: 0;
+    line-height: 68px;
+  }
+}
+
+.open-detailed {
+  position: relative;
+  height: 68px;
+  width: 30px;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);;
+    left: 0;
+    width: 30px;
+    height: 10px;
+    border-radius: 3px;
+    background: #AAAAAA;
+    transition: all 0.2s ease-out;
+  }
+  &:after {
+
+    transform: rotate(90deg);
+  }
+  &:hover {
+    &:before, &:after {
+    background: #666666;
+    }
+  }
+  &.collapsed {
+    &:after {
+      transform: rotate(0);
+    }
+  }
+  &.remove-user {
+    width: 15px;
+    padding-right: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    &:before, &:after {
+      left: 0;
+    }
+    &:hover {
+      &:before, &:after {
+        background: #8b4830;
+      }
+    }
+  }
+  &.add-user-form {
+    height: 40px;
+    &:hover {
+      &:before, &:after {
+        background: #458b37;
+      }
+    }
+  }
+}
+
+.user {
+  &-pic {
+    display: flex;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 4px solid #FFFFFF;
+    }
+  }
+  &-last-name {
+
+  }
+  &-first-name {
+
+  }
+  &-name {
+
+  }
+  &-phone {
+
+  }
+  &-location {
+
+  }
+}
+
+.detailed-row {
+  p {
+    line-height: 24px;
+    font-weight: 700;
+    span {
+      font-weight: 400;
+    }
+  }
+  img {
+    user-select: none;
+    width: 164px;
+    height: 164px;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+  }
+}

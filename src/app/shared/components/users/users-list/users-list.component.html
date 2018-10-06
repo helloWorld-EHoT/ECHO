@@ -1,0 +1,28 @@
+<div class="user-list__header">
+  <div class="container">
+    <div class="row">
+      <div class="col-1 d-f a-i-c"></div>
+      <div class="col-2 d-f a-i-c" *ngFor="let header of listHeaders">
+        {{header | titlecase}}
+      </div>
+      <div class="col-1 d-f a-i-c" [title]="'Open form to add new user'">
+        <div class="open-detailed add-user-form" (click)="openCloseAddNewUserForm()"></div>
+      </div>
+    </div>
+    <div class="row add-user-form" [class.collapsed]="!addFormState">
+      <echo-add-new (addNewUser)="addNewUser($event)"></echo-add-new>
+    </div>
+  </div>
+</div>
+
+<ul class="user-list">
+  <li *ngFor="let user of usersList" class="user-list__item">
+    <echo-user-item
+      [userData]="user"
+      (toggleCollapse)="toggleCollapse($event)"
+      (removeUser)="removeUserFromList($event)"></echo-user-item>
+  </li>
+</ul>
+
+
+
