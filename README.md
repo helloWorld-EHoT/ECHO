@@ -1,5 +1,21 @@
-# Demo:
+## Demo:
 <a href="https://helloworld-ehot.github.io/" target="_blank">>here<</a>
+
+## Tasks solvable application:
+<a href="https://gist.github.com/littlepea/bdae7b11cd1294cac809" target="_blank">Instruction</a>
+
+## Installation:
+Clone this repository:
+> git clone https://github.com/helloWorld-EHoT/ECHO.git
+
+Browse to the folder with the command:
+> cd ECHO
+
+Install all dependencies:
+> npm install
+
+Start project:
+> npm start
 
 # ECHO
 
