@@ -1,3 +1,24 @@
+## Demo:
+[>here<](https://helloworld-ehot.github.io/)
+
+### Tasks solvable application:
+[Instruction](https://gist.github.com/littlepea/bdae7b11cd1294cac809)
+
+### Installation:
+Clone this repository:
+> `git clone https://github.com/helloWorld-EHoT/ECHO.git`
+
+###Browse to the folder with the command:
+> `cd ECHO`
+
+### Install all dependencies:
+
+> `npm install`
+
+### Start project:
+
+> `npm start`
+
 # ECHO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
