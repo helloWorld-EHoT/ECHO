@@ -9,13 +9,13 @@ Clone this repository:
 > `git clone https://github.com/helloWorld-EHoT/ECHO.git`
 
 Browse to the folder with the command:
-> cd ECHO
+> `cd ECHO`
 
 Install all dependencies:
-> npm install
+> `npm install`
 
 Start project:
-> npm start
+> `npm start`
 
 # ECHO
 
