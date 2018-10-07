@@ -11,16 +11,16 @@
   button {
     height: 100%;
     width: 100%;
-    border: 1px solid #AAAAAA;
+    border: 1px solid $light-grey;
     border-radius: 3px;
-    background: rgba(69, 139, 55, 0.52);
+    background: $green-50;
     cursor: pointer;
-    color: #EEEEEE;
+    color: $white;
     &:hover {
-      background: rgba(69, 139, 55, 0.73);
+      background: $green-75;
     }
     &:disabled {
-      color: #666666;
+      color: $grey;
       cursor: default;
       background: transparent !important;
     }
@@ -40,7 +40,7 @@ form {
       opacity: 0.5;
       margin-right: 10px;
       span {
-        color: #bb412a;
+        color: $red;
       }
     }
     input {
@@ -49,10 +49,10 @@ form {
       outline: none;
       background: transparent;
       border: none;
-      border-bottom: 1px solid #AAAAAA;
+      border-bottom: 1px solid $light-grey;
       transition: 0.2s ease-out;
       &:focus, &:active {
-        border-bottom-color: #458b37;
+        border-bottom-color: $green;
       }
       &.hidden {
         opacity: 0;

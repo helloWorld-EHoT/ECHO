@@ -11,7 +11,7 @@ import {IRandomUserAPI, IRandomUserResult} from "../../../models/random-user.mod
 export class UsersListComponent implements OnInit {
 
   usersList: IRandomUserResult[];
-  usersCount: number = 15;
+  usersCount: number = 5;
 
   addFormState: boolean = false;
 
