@@ -6,7 +6,7 @@
 
 ## Installation:
 Clone this repository:
-> git clone https://github.com/helloWorld-EHoT/ECHO.git
+> `git clone https://github.com/helloWorld-EHoT/ECHO.git`
 
 Browse to the folder with the command:
 > cd ECHO
